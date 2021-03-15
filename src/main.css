@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =============== */
+/*    VARIABLES    */
+/* =============== */
+:root {
+    --character-main-color: firebrick;
+    --character-border-color: black;
+    --character-border-size: 15px;
+    --character-eyes-color: rgb(220, 220, 220);
+}
+
+body {
+    background-color: #333;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/* ================== */
+/*   SOCIAL BUTTONS   */
+/* ================== */
+#social-buttons {
+    height: 10rem;
+    width: 14rem;
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    font-size: 2.7rem;
+}
+
+.fa-linkedin-in,
+.fa-github {
+    color: whitesmoke;
+    transition: linear 0.1s;
+}
+
+.fa-linkedin-in:hover,
+.fa-github:hover {
+    color: rgb(26, 161, 224);
+    transform: scale(1.2, 1.2);
+}
+
+/* ============== */
+/*    CHARACTER   */
+/* ============== */
+/* BODY */
+.character-corpse {
+    width: 320px;
+    height: 450px;
+    background: var(--character-main-color);
+    border: var(--character-border-size) solid var(--character-border-color);
+    border-radius: 35% 40% 0px 0px;
+}
+
+/* BACKPACK */
+.character-corpse::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 200px;
+    background-color: var(--character-main-color);
+    border-radius: 25% 0% 0% 25%;
+    border: var(--character-border-size) solid var(--character-border-color);
+    transform: translate(-6.9rem, 8rem);
+}
+
+/* EYES */
+.character-corpse::after {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 150px;
+    background-color: var(--character-eyes-color);
+    border-radius: 30% 45% 45% 40%;
+    border: var(--character-border-size) solid var(--character-border-color);
+    transform: translate(6rem, 2.25rem);
+}
+
+/* LEGS */
+.character-legs {
+    height: 110px;
+    width: 120px;
+    background-color: var(--character-main-color);
+    border-radius: 0% 0% 32% 32%;
+    border-left: var(--character-border-size) solid var(--character-border-color);
+    border-right: var(--character-border-size) solid var(--character-border-color);
+    border-bottom: var(--character-border-size) solid var(--character-border-color);
+    transform: translate(-6.24rem, -0.94rem);
+}
+
+.character-legs::after {
+    content: "";
+    position: absolute;
+    height: 95px;
+    width: 90px;
+    background-color: var(--character-main-color);
+    border-radius: 0% 0% 32% 32%;
+    border-left: var(--character-border-size) solid var(--character-border-color);
+    border-right: var(--character-border-size) solid var(--character-border-color);
+    border-bottom: var(--character-border-size) solid var(--character-border-color);
+    transform: translateX(11.55rem);
+}
